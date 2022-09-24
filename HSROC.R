@@ -98,7 +98,7 @@ mean_point=data.frame(x=Spec, y=Sens)
 
 c<-ggplot(study_level,aes(Specificity,Sensitivity)) + geom_path(aes((1-X),Y,lty="95% prediction region"),data=pred_region)+
   geom_path(aes((1-X),Y,lty="95% confidence region"), data=conf_region)
-c + geom_point() +xlim(1,0)+ylim(0,1)+geom_point(aes(x,y,col="Summary Estimate"),data=mean_point)+ theme_tufte()+
-  theme(legend.position= c(0.8,0.2),
+c + geom_point(size=2) +xlim(1,0)+ylim(0,1)+geom_point(aes(x,y,col="Summary Estimate"),data=mean_point)+ theme_tufte()+
+  theme(legend.position= c(0.7,0.2),
         legend.title=element_blank())
 
